@@ -1,0 +1,108 @@
+.feedback-section {
+  background: linear-gradient(135deg, #0a0f1f, #13294b);
+  color: #fff;
+  text-align: center;
+  padding: 80px 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.feedback-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: #00aaff;
+  letter-spacing: 1px;
+}
+
+.feedback-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.feedback-track {
+  display: flex;
+  animation: scroll 35s linear infinite;
+  gap: 2rem; /* Add gaps between cards */
+}
+
+.feedback-card {
+  flex: 0 0 320px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.feedback-text {
+  font-size: 1.1rem;
+  color: #e6e6e6;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.feedback-name {
+  color: #00c3ff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Continuous smooth scrolling animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Stats section below */
+.stats-section {
+  margin-top: 80px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.stats-section h3 {
+  font-size: 2rem;
+  color: #00d4ff;
+  margin-bottom: 10px;
+}
+
+.stats-section p {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .feedback-section h2 {
+    font-size: 2rem;
+  }
+
+  .feedback-card {
+    flex: 0 0 260px;
+    padding: 1.2rem;
+  }
+
+  .feedback-text {
+    font-size: 1rem;
+  }
+}

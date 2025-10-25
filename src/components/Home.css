@@ -13,7 +13,7 @@
   justify-content: flex-start;
 }
 
-/* Dark overlay for better text visibility */
+/* Dark overlay */
 .home-slider::before {
   content: '';
   position: absolute;
@@ -22,7 +22,7 @@
   z-index: 1;
 }
 
-/* Ensure content is above overlay */
+/* Content on top */
 .home-slider > * {
   position: relative;
   z-index: 2;
@@ -47,21 +47,37 @@
   line-height: 1.2;
 }
 
-/* Paragraph */
+/* Description */
 .slider-text p {
   font-size: 1.3rem;
   color: #f1f1f1;
   font-weight: 500;
   line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
-/* Floating text animation */
-@keyframes textFloat {
-  0% { transform: translateY(-52%); }
-  100% { transform: translateY(-48%); }
+/* Explore Button */
+.explore-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
-/* New smooth slide fade effect */
+.explore-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  border-color: #00bcd4;
+  color: #00bcd4;
+}
+
+/* Animations */
 .fade-in {
   animation: fadeInZoom 1.5s ease-in-out forwards;
 }
@@ -70,7 +86,6 @@
   animation: fadeOutZoom 1.5s ease-in-out forwards;
 }
 
-/* Slide-in animation */
 @keyframes fadeInZoom {
   0% {
     opacity: 0;
@@ -82,7 +97,6 @@
   }
 }
 
-/* Slide-out animation */
 @keyframes fadeOutZoom {
   0% {
     opacity: 1;
@@ -94,7 +108,7 @@
   }
 }
 
-/* Responsive for mobile */
+/* Responsive */
 @media (max-width: 768px) {
   .slider-text {
     left: 5%;
@@ -107,5 +121,10 @@
 
   .slider-text p {
     font-size: 1rem;
+  }
+
+  .explore-btn {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
   }
 }

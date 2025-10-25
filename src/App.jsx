@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import Courses from './components/Courses';
+import Feedback from './components/Feedback';
 import CourseDetail from './pages/CourseDetail';
 import './App.css';
 
@@ -13,7 +14,7 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<><Home /><About /><Courses /></>} />
+          <Route path="/" element={<><Home /><About /><Courses /><Feedback /></>} />
           <Route path="/course/:courseId" element={<CourseDetail />} />
         </Routes>
       </div>

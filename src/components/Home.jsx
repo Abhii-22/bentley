@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 const slides = [
   {
     src: '/images/STAAD.jpg',
+    courseId: 'staad-pro',
     text: {
       title: 'STAAD Pro',
       description:
@@ -12,6 +14,7 @@ const slides = [
   },
   {
     src: '/images/save.jpg',
+    courseId: 'sewergems',
     text: {
       title: 'OpenFlows SewerGEMS',
       description:
@@ -20,6 +23,7 @@ const slides = [
   },
   {
     src: '/images/micro.jpg',
+    courseId: 'microstation',
     text: {
       title: 'MicroStation',
       description:
@@ -28,6 +32,7 @@ const slides = [
   },
   {
     src: '/images/open.jpg',
+    courseId: 'openroads-designer',
     text: {
       title: 'OpenRoads Designer',
       description:
@@ -36,6 +41,7 @@ const slides = [
   },
   {
     src: '/images/pipe.jpg',
+    courseId: 'watergems',
     text: {
       title: 'OpenFlows WaterGEMS',
       description:
@@ -47,6 +53,7 @@ const slides = [
 const Home = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [animation, setAnimation] = useState('fade-in');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -60,6 +67,11 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const exploreCourse = () => {
+    const currentSlide = slides[currentSlideIndex];
+    navigate(`/course/${currentSlide.courseId}`);
+  };
+
   const currentSlide = slides[currentSlideIndex];
 
   return (
@@ -71,6 +83,7 @@ const Home = () => {
         <div className={`slider-text ${animation}`}>
           <h1>{currentSlide.text.title}</h1>
           <p>{currentSlide.text.description}</p>
+          <button className="explore-btn" onClick={exploreCourse}>Explore Course →</button>
         </div>
       </div>
     </div>
