@@ -1,0 +1,111 @@
+.home-slider {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Dark overlay for better text visibility */
+.home-slider::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Ensure content is above overlay */
+.home-slider > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Text section */
+.slider-text {
+  max-width: 600px;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 0 5%;
+}
+
+/* Title */
+.slider-text h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* Paragraph */
+.slider-text p {
+  font-size: 1.3rem;
+  color: #f1f1f1;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Floating text animation */
+@keyframes textFloat {
+  0% { transform: translateY(-52%); }
+  100% { transform: translateY(-48%); }
+}
+
+/* New smooth slide fade effect */
+.fade-in {
+  animation: fadeInZoom 1.5s ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOutZoom 1.5s ease-in-out forwards;
+}
+
+/* Slide-in animation */
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide-out animation */
+@keyframes fadeOutZoom {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .slider-text {
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .slider-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .slider-text p {
+    font-size: 1rem;
+  }
+}

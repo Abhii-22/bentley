@@ -1,0 +1,185 @@
+.courses-section {
+  background-color: #0c1117;
+  color: #fff;
+  padding: 6rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.courses-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.courses-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.courses-subheading {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Main container for scroll + overlay arrows */
+.courses-container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Scrollable cards row */
+.courses-grid {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.courses-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Overlay arrow buttons */
+.arrow-btn.overlay {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  z-index: 5;
+}
+
+.arrow-btn.overlay:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Left and right positioning */
+.arrow-btn.left {
+  left: -25px;
+}
+
+.arrow-btn.right {
+  right: -25px;
+}
+
+/* Course Card Styles */
+.course-card {
+  background: #1a222c;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #2a3441;
+  flex: 0 0 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-image-container {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.card-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(26, 34, 44, 1) 0%, rgba(26, 34, 44, 0) 50%);
+}
+
+.price-badge {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  background: rgba(12, 17, 23, 0.9);
+  border: 1px solid #2a3441;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card-content {
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.course-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.course-meta {
+  display: flex;
+  gap: 1.5rem;
+  color: #a0a0a0;
+  margin-bottom: 1rem;
+}
+
+.course-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stars {
+  color: #f59e0b;
+}
+
+.rating-text {
+  color: #a0a0a0;
+}
+
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  background: #2a3441;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.enroll-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enroll-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
