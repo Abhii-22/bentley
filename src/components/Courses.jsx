@@ -6,7 +6,7 @@ const courseData = [
   {
     title: 'STAAD Pro Advanced',
     courseId: 'staad-pro',
-    image: 'https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: '/images/stadd.jpeg',
     price: '10,000',
     duration: '6 Months',
     students: '1,200+',
@@ -17,7 +17,7 @@ const courseData = [
   {
     title: 'OpenRoads Designer Complete',
     courseId: 'openroads-designer',
-    image: 'https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: '/images/roadopen.jpg',
     price: '10,000',
     duration: '8 Months',
     students: '950+',
@@ -39,7 +39,7 @@ const courseData = [
   {
     title: 'OpenFlows SewerGEMS',
     courseId: 'sewergems',
-    image: 'https://images.pexels.com/photos/4392033/pexels-photo-4392033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: '/images/damn-flood-control.jpg',
     price: '10,000',
     duration: '7 Months',
     students: '800+',
@@ -50,7 +50,7 @@ const courseData = [
   {
     title: 'OpenFlows WaterGEMS',
     courseId: 'watergems',
-    image: 'https://images.pexels.com/photos/4392033/pexels-photo-4392033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: '/images/_o_p_openflows-training_1.jpg',
     price: '10,000',
     duration: '7 Months',
     students: '800+',
