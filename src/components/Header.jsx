@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -23,14 +24,29 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleHomeClick = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    closeMobileMenu();
+  };
+
   const handleSmoothScroll = (e) => {
     e.preventDefault();
     const href = e.currentTarget.getAttribute('href');
     const targetId = href.replace(/.*#/, '');
-    const elem = document.getElementById(targetId);
 
-    if (elem) {
-      elem.scrollIntoView({
+    if (targetId) {
+      const elem = document.getElementById(targetId);
+      if (elem) {
+        elem.scrollIntoView({
+          behavior: 'smooth',
+        });
+      }
+    } else {
+      window.scrollTo({
+        top: 0,
         behavior: 'smooth',
       });
     }
@@ -54,7 +70,7 @@ const Header = () => {
         
         <ul className={isMobileMenuOpen ? 'active' : ''}>
           <li>
-            <Link to="/" onClick={closeMobileMenu}>
+            <Link to="/" onClick={handleHomeClick}>
               <span className="nav-icon">🏠</span>
               Home
             </Link>

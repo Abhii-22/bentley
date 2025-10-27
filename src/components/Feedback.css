@@ -20,12 +20,19 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  padding: 20px 0; /* Add vertical padding */
 }
 
 .feedback-track {
   display: flex;
-  animation: scroll 35s linear infinite;
+  width: calc(320px * 20 + 2rem * 19); /* (card-width * number-of-cards) + (gap * (number-of-cards - 1)) */
+  animation: scroll 20s linear infinite;
   gap: 2rem; /* Add gaps between cards */
+  will-change: transform;
+}
+
+.feedback-slider:hover .feedback-track {
+  animation-play-state: paused;
 }
 
 .feedback-card {
