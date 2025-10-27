@@ -1,9 +1,14 @@
-import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import './CourseDetail.css';
 
 const CourseDetail = () => {
-  const { courseId } = useParams();
+    const { courseId } = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const coursesData = {
     'openroads-designer': {
@@ -154,7 +159,7 @@ const CourseDetail = () => {
   return (
     <div className="course-detail-page">
       <div className="course-detail-container">
-        <Link to="/" className="back-link">&larr; Back to Courses</Link>
+                <button onClick={() => navigate(-1)} className="back-link">&larr; Back to Courses</button>
         <div className="course-detail-content">
           <main className="course-main-content">
             <span className="course-category">{course.category}</span>

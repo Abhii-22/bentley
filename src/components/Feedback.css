@@ -4,7 +4,8 @@
   text-align: center;
   padding: 80px 0;
   font-family: 'Poppins', sans-serif;
-  overflow: hidden;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll from animation */
 }
 
 .feedback-section h2 {
@@ -93,6 +94,10 @@
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+  .feedback-section {
+    padding: 60px 1rem;
+  }
+
   .feedback-section h2 {
     font-size: 2rem;
   }

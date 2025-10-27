@@ -111,8 +111,8 @@
 /* Responsive */
 @media (max-width: 768px) {
   .slider-text {
-    left: 5%;
-    max-width: 90%;
+    padding: 0 5%;
+    max-width: 100%;
   }
 
   .slider-text h1 {
