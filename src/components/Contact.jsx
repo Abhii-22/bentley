@@ -97,8 +97,7 @@ const Contact = () => {
           <div className="footer-about">
             <h3>Medini Technologies</h3>
             <p>
-              Leading the future of digital construction with innovative BIM
-              solutions.
+             Leading the future of digital infrastructure with innovative engineering solutions.
             </p>
           </div>
 
@@ -112,7 +111,7 @@ const Contact = () => {
                 <a href="#about">About</a>
               </li>
               <li>
-                <a href="#courses">Services</a>
+                <a href="#courses">Courses</a>
               </li>
               <li>
                 <a href="#contact">Contact</a>
