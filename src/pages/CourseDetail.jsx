@@ -15,9 +15,9 @@ const CourseDetail = () => {
       title: 'OpenRoads Designer',
       category: 'Engineering Software',
       description: 'Civil infrastructure design software for roadways, offering 3D modeling, terrain modeling, drainage, and corridor modeling in a single platform.',
-      duration: '40-50 Hours',
-      level: 'Beginner',
-      audience: 'Civil/Architectural (CIV/ARCH)',
+      duration: '1 Months',
+      level: 'Advanced',
+      audience: 'M Tech(infrastructure/Highway), Civil Engineers (CIV)',
       curriculum: [
         'User Interface & Project Setup',
         'Terrain Modeling & Survey Data',
@@ -43,8 +43,8 @@ const CourseDetail = () => {
       title: 'OpenFlows WaterGEMS',
       category: 'Engineering Software',
       description: 'Water distribution modeling software that helps engineers plan, design, and optimize water systems with advanced hydraulic modeling capabilities.',
-      duration: '30 Hours',
-      level: 'Intermediate',
+      duration: '1 Months',
+      level: 'Advanced',
       audience: 'Water Engineers, Civil Engineers (CIV/ENV)',
       curriculum: [
         'Introduction to Hydraulic Modeling',
@@ -72,7 +72,7 @@ const CourseDetail = () => {
       title: 'STAAD Pro Advanced',
       category: 'Structural Analysis',
       description: 'Comprehensive structural analysis and design software for buildings, bridges, towers, and other structures with advanced modeling capabilities.',
-      duration: '6 Months',
+      duration: '1 Months',
       level: 'Advanced',
       audience: 'Structural Engineers, Civil Engineers (CIV)',
       curriculum: [
@@ -100,8 +100,8 @@ const CourseDetail = () => {
       title: 'MicroStation for Professionals',
       category: 'CAD Software',
       description: 'Professional CAD software for 2D and 3D design, drafting, and modeling with advanced visualization and documentation capabilities.',
-      duration: '4 Months',
-      level: 'Intermediate',
+      duration: '1 Months',
+      level: 'Advanced',
       audience: 'CAD Professionals, Engineers (ALL)',
       curriculum: [
         'MicroStation Interface and Navigation',
@@ -110,7 +110,7 @@ const CourseDetail = () => {
         'Advanced 3D Techniques',
         'Visualization and Rendering',
         'Documentation and Annotation',
-        'Collaboration and File Management'
+        'File Management and Collaboration'
       ],
       whatYoullLearn: [
         'Professional CAD drafting',
@@ -128,8 +128,8 @@ const CourseDetail = () => {
       title: 'OpenFlows SewerGEMS',
       category: 'Hydraulic Modeling',
       description: 'Comprehensive sewer system modeling software for planning, design, and analysis of wastewater collection systems.',
-      duration: '7 Months',
-      level: 'Intermediate',
+      duration: '1 Months',
+      level: 'Advanced',
       audience: 'Environmental Engineers, Civil Engineers (CIV/ENV)',
       curriculum: [
         'Introduction to Sewer System Modeling',
@@ -186,24 +186,20 @@ const CourseDetail = () => {
               <h2>Curriculum</h2>
               <ul>
                 {course.curriculum.map((item, index) => (
-                  <li key={index}><span>{index + 1}</span>{item}</li>
+                  <li key={index}>
+                    <span className="module-number">{String(index + 1).padStart(2, '0')}</span>
+                    <span className="module-title">{item}</span>
+                  </li>
                 ))}
               </ul>
             </div>
             <div className="learning-outcomes">
               <h2>What You'll Learn</h2>
-              <div className="outcomes-grid">
-                <ul>
-                  {course.whatYoullLearn.slice(0, 2).map((item, index) => (
-                    <li key={index}>✓ {item}</li>
-                  ))}
-                </ul>
-                <ul>
-                  {course.whatYoullLearn.slice(2, 4).map((item, index) => (
-                    <li key={index}>✓ {item}</li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="outcomes-grid">
+                {course.whatYoullLearn.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
             </div>
           </main>
           <aside className="course-sidebar">

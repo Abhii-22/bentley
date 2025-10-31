@@ -6,9 +6,8 @@ const courseData = [
   {
     title: 'STAAD Pro Advanced',
     courseId: 'staad-pro',
-    image: '/images/stadd.jpeg',
-    price: '10,000',
-    duration: '6 Months',
+    image: '/images/staadpro.jpg',
+    duration: '1 Months',
     students: '1,200+',
     successRate: '96%',
     rating: 4.9,
@@ -18,8 +17,7 @@ const courseData = [
     title: 'OpenRoads Designer Complete',
     courseId: 'openroads-designer',
     image: '/images/roadopen.jpg',
-    price: '10,000',
-    duration: '8 Months',
+    duration: '1 Months',
     students: '950+',
     successRate: '94%',
     rating: 4.8,
@@ -28,9 +26,8 @@ const courseData = [
   {
     title: 'MicroStation for Professionals',
     courseId: 'microstation',
-    image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    price: '10,000',
-    duration: '4 Months',
+    image: '/images/microstartion.jpg',
+    duration: '1 Months',
     students: '2,500+',
     successRate: '97%',
     rating: 4.7,
@@ -40,8 +37,7 @@ const courseData = [
     title: 'OpenFlows SewerGEMS',
     courseId: 'sewergems',
     image: '/images/damn-flood-control.jpg',
-    price: '10,000',
-    duration: '7 Months',
+    duration: '1 Months',
     students: '800+',
     successRate: '95%',
     rating: 4.9,
@@ -51,8 +47,7 @@ const courseData = [
     title: 'OpenFlows WaterGEMS',
     courseId: 'watergems',
     image: '/images/_o_p_openflows-training_1.jpg',
-    price: '10,000',
-    duration: '7 Months',
+    duration: '1 Months',
     students: '800+',
     successRate: '95%',
     rating: 4.9,
@@ -90,7 +85,7 @@ const Courses = () => {
                 className="card-image-container"
                 style={{ backgroundImage: `url(${course.image})` }}
               >
-                                <div className="price-badge">₹{course.price}</div>
+                          
               </div>
               <div className="card-content">
                 <h3 className="course-title">{course.title}</h3>
