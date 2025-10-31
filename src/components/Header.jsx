@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { FaBars, FaTimes, FaHome, FaInfoCircle, FaBook, FaEnvelope } from 'react-icons/fa';
 import './Header.css';
 
 const Header = () => {
@@ -65,32 +66,32 @@ const Header = () => {
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
-          {isMobileMenuOpen ? '✕' : '☰'}
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
         
         <ul className={isMobileMenuOpen ? 'active' : ''}>
           <li>
             <Link to="/" onClick={handleHomeClick}>
-              <span className="nav-icon">🏠</span>
-              Home
+              <FaHome className="nav-icon" />
+              <span>Home</span>
             </Link>
           </li>
           <li>
             <Link to="/#about" onClick={handleSmoothScroll}>
-              <span className="nav-icon">ℹ️</span>
-              About
+              <FaInfoCircle className="nav-icon" />
+              <span>About</span>
             </Link>
           </li>
           <li>
             <Link to="/#courses" onClick={handleSmoothScroll}>
-              <span className="nav-icon">📚</span>
-              Courses
+              <FaBook className="nav-icon" />
+              <span>Courses</span>
             </Link>
           </li>
           <li>
             <Link to="/#contact" onClick={handleSmoothScroll}>
-              <span className="nav-icon">📞</span>
-              Contact
+              <FaEnvelope className="nav-icon" />
+              <span>Contact</span>
             </Link>
           </li>
         </ul>
