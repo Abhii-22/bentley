@@ -17,7 +17,7 @@ const CourseDetail = () => {
       description: 'Civil infrastructure design software for roadways, offering 3D modeling, terrain modeling, drainage, and corridor modeling in a single platform.',
       duration: '1 Months',
       level: 'Advanced',
-      audience: 'M Tech(infrastructure/Highway), Civil Engineers (CIV)',
+      audience: 'M Tech(infrastructure/Highway),<br />Civil Engineers (CIV)',
       curriculum: [
         'User Interface & Project Setup',
         'Terrain Modeling & Survey Data',
@@ -74,7 +74,7 @@ const CourseDetail = () => {
       description: 'Comprehensive structural analysis and design software for buildings, bridges, towers, and other structures with advanced modeling capabilities.',
       duration: '1 Months',
       level: 'Advanced',
-      audience: 'Structural Engineers, Civil Engineers (CIV)',
+      audience: 'Structural Engineers,<br />Civil Engineers (CIV)',
       curriculum: [
         'Introduction to STAAD Pro',
         'Model Creation and Geometry',
@@ -179,7 +179,7 @@ const CourseDetail = () => {
               <div className="info-card">
                 <div className="info-icon">👥</div>
                 <span>Audience</span>
-                <strong>{course.audience}</strong>
+                <strong dangerouslySetInnerHTML={{ __html: course.audience }} />
               </div>
             </div>
             <div className="curriculum">

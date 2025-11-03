@@ -36,7 +36,7 @@ const courseData = [
   {
     title: 'OpenFlows SewerGEMS',
     courseId: 'sewergems',
-    image: '/images/damn-flood-control.jpg',
+    image: '/images/_o_p_openflows-training_1.jpg',
     duration: '1 Months',
     students: '800+',
     successRate: '95%',
@@ -46,7 +46,7 @@ const courseData = [
   {
     title: 'OpenFlows WaterGEMS',
     courseId: 'watergems',
-    image: '/images/_o_p_openflows-training_1.jpg',
+    image: '/images/damn-flood-control.jpg',
     duration: '1 Months',
     students: '800+',
     successRate: '95%',

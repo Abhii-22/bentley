@@ -72,7 +72,7 @@
 
 .info-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
   margin-bottom: 3rem;
 }
@@ -89,6 +89,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .info-icon {
@@ -126,6 +127,10 @@
   font-size: 1.3rem;
   font-weight: 700;
   color: #fff;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .curriculum h2, .learning-outcomes h2 {

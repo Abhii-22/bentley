@@ -165,11 +165,6 @@
   gap: 1rem;
 }
 
-.about-highlights .highlight-card:last-child {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: calc(50% - 0.5rem);
-}
 
 .highlight-card {
   background: rgba(255, 255, 255, 0.05);
@@ -216,5 +211,9 @@
 
   .about-heading {
     font-size: 2.4rem;
+  }
+
+  .stat-card {
+    min-width: 150px;
   }
 }
